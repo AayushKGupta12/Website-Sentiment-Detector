@@ -6,17 +6,17 @@ import requests
 from bs4 import BeautifulSoup
 import joblib
 
-# Load the trained model
+# Load your trained model
 pipe_lr = joblib.load(open("Text_emotion_trained_model.pkl", "rb"))
 
-# Emotion to emoji mapping
+# Add emoji according to your need
 emotions_emoji_dict = {
     "anger": "😠", "disgust": "🤮", "fear": "😨😱", "happy": "🤗", "joy": "😂",
     "neutral": "😐", "sad": "😔", "sadness": "😔", "shame": "😳", "surprise": "😮"
 }
 
 
-# Function to predict emotions
+# function to predict emotions
 def predict_emotions(docx):
     results = pipe_lr.predict([docx])
     return results[0]
@@ -28,7 +28,7 @@ def get_prediction_proba(docx):
     return results
 
 
-# Function to scrape text from a URL
+# Function to scrape text from url
 def scrape_text_from_url(url):
     try:
         response = requests.get(url)

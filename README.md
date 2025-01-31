@@ -1,5 +1,8 @@
 # **Website Sentiment Analysis App** 🎭💬  
 
+## Click on this link to access my deployed code :-  https://emotioninsight.streamlit.app/
+
+
 A **Streamlit**-based web app to predict emotions in text using a pre-trained machine learning model. The app supports two input modes:  
 
 1. **Manual Text Input** ✍️: Enter text directly to analyze its emotional tone.  
